@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> Portfolio - Matthew Holland </title>
+
+		<!-- Apply CSS reset file to maintain cross-browser compatibility -->
+		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+
+		<!-- This is the fluid grid layout with full-width header and footer. Navigate to index_fixed_container.html to see fixed container layout-->
+		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+	</head>
+	<body>
+		<!-- Note: these 'bootstrap look-alike' classes are custom; I've wanted to try and replicate it to understand it better... -->
+		<div class="container">
+			<header class="bg-white">
+				<div class="row">
+					<!-- Take this out and apply the 'offset-1' class to <header> if you want the background to go left of the name -->
+					<div class="col-1 columns">
+						<p> </p>
+					</div>
+					
+					<div class="col-3 columns name">
+						<h1 class="text-center"> Matthew Holland </h1>
+					</div>
+					
+					<div class="col-4 columns">
+						<p> </p>
+					</div>
+	
+					<nav class="col-3 columns">
+						<ul class="inline-ul no-bullet">
+							<li class="first"> <a href="index.html">About</a> </li>
+							<li> <a href="portfolio.html">Portfolio</a> </li>
+							<li> <a href="contact.html">Contact</a> </li>
+						</ul>
+					</nav>
+	
+					<div class="col-1 columns">
+						<p> </p>
+					</div>
+				</div> <!-- .row -->
+			</header>
+
+			<div class="row placeholder">
+				<div class="col-12 columns">
+					<p> </p>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-1 columns">
+					<p> </p>
+				</div>
+				<section class="col-6 columns bg-white">
+						<h1> Contact </h1>
+						<hr/>
+	
+						<article>
+							<form>
+								<div class="form-group">
+									<label for="name" name="name" placeholder="John Smith"> Name </label>
+									<input class="form-control" type="text" name="name" />
+								</div>
+
+								<div class="form-group">
+									<label for="email" name="email" placeholder="example@gmail.com"> Email </label>
+									<input class="form-control" type="text" name="email" />
+								</div>
+
+								<div class="form-group">
+									<label for="message"> Message </label>
+									<textarea class="form-control text-area" name="message"> </textarea>
+								</div>
+
+								<input type="submit" name="submit"/>
+							</form>
+						</article>
+				</section>
+
+				<div class="col-1 columns">
+					<p> </p>
+				</div>
+	
+				<aside class="col-3 columns bg-white">
+					<h3 class="text-center"> Connect With Me </h3>
+					<hr/>
+	
+					<ul class="inline-ul no-bullet text-center">
+						<li> <a href="#"><img src="assets/images/github-icon.png"   height="66" width="66" alt="Github"/>         </a></li>
+						<li> <a href="#"><img src="assets/images/linkedin-icon.png" height="66" width="66" alt="LinkedIn"/>       </a></li>
+						<li> <a href="#"><img src="assets/images/stackoverflow.png" height="66" width="66" alt="Stack Overflow"/> </a></li>
+					</ul>
+				</aside>
+	
+
+				<div class="col-1 columns">
+					<p> </p>
+				</div>
+			</div> <!-- .row -->
+			<footer>
+				<div class="row">
+					<div class="col-4 columns">
+						<p> </p>
+					</div>
+
+					<div class="col-4 columns">	
+						<h5 class="text-center"> &copy; 2016 Matthew Holland </h5>
+					</div>
+
+					<div class="col-4 columns">
+						<p> </p>
+					</div>
+				</div>
+			</footer>
+		</div> <!-- .container -->
+	</body>
+</html>
