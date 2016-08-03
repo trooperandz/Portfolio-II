@@ -36,7 +36,7 @@ nav {
 
 /* Move the nav ul down, inline with the <h1> name */
 nav ul {
-	margin-top: 41px;
+	padding: 37px 0px;
 }
 
 nav ul li {
@@ -394,6 +394,11 @@ input[type="submit"]:hover {
 
 	.margin-sm {
 		margin-bottom: 40px;
+	}
+
+	/* Override container left and right padding for main name <h1> */
+	header h1 {
+		margin: 0px -15px;
 	}
 }
 
