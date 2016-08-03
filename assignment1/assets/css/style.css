@@ -15,7 +15,7 @@ body {
 	/* Apply global font styles */
 	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 	/* For sticky footer */
-	margin: 0 0 80px;
+		margin: 0 0 80px;
 }
 
 section, aside {
@@ -48,7 +48,7 @@ nav ul li {
 
 section {
 	padding: 25px;
-	margin-bottom: 45px;
+	/*margin-bottom: 45px;*/ /* Do you need to just add this for medium and small columns?? so that there is space under it when it is stacked? */
 }
 
 /* Make the image rotate on hover event */
@@ -100,13 +100,11 @@ footer {
 	border-top-width: 6px;
 	border-top-color: #4aaaa5;
 	border-radius: 5px 5px 0 0;
-	/* Dark gray */
+	/* Dark gray background */
 	background: #666666;
 	/* sticky footer styles */
 	position: absolute;
 	bottom: 0;
-	/* To ensure that the <article> text does not flow behind the footer border when on small screen */
-	padding-top: 6px;
 }
 
 h1, h2, h3, h4, h5 {
@@ -156,6 +154,7 @@ h5 {
 	font-size: .9em;
 }
 
+/* Note: the footer height is 80px including padding, <h5> and border */
 footer h5 {
 	color: #ccc;
 	padding: 30px;
@@ -281,10 +280,14 @@ input[type="submit"]:hover {
 	.col-lg-12 {
 		width: 100%;
 	}
+
+	.margin-lg {
+		margin-bottom: 40px;
+	}
 }
 
-/* Apply medium-columns grid styles if screen is at least 768px wide */
 @media (min-width: 768px) and (max-width: 980px) {
+	/* Apply medium-columns grid styles if screen is at least 768px wide, and less than 980px wide */
 	.col-md-1 {
 		width: 8.33%;
 	}
@@ -331,6 +334,11 @@ input[type="submit"]:hover {
 
 	.col-md-12 {
 		width: 100%;
+	}
+
+	/* Apply margin to main section */
+	.margin-md {
+		margin-bottom: 40px;
 	}
 }
 
@@ -382,6 +390,10 @@ input[type="submit"]:hover {
 
 	.col-sm-12 {
 		width: 100%;
+	}
+
+	.margin-sm {
+		margin-bottom: 40px;
 	}
 }
 

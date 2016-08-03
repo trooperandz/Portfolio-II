@@ -6,14 +6,14 @@
 		<!-- Apply CSS reset file to maintain cross-browser compatibility -->
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
-		<!-- This is the fluid grid layout with full-width header and footer. Navigate to index_fixed_container.html to see fixed container layout-->
+		<!-- This is the fluid grid layout with full-width header and footer -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
 	</head>
+
 	<body>
-		<!-- Note: these 'bootstrap look-alike' classes are custom; I've wanted to try and replicate it to understand it better... -->
+		<!-- Note: these 'bootstrap look-alike' classes are custom. No Bootstrap files welcome in this house! -->
 		
-		<!-- The header stretches 100% -->
+		<!-- The header stretches 100%, with no padding on left or right -->
 		<header class="bg-white">
 			<!-- Contain content in the header to adhere to the grid system -->
 			<div class="container">
@@ -23,15 +23,16 @@
 						<p> </p>
 					</div>
 					
-					<div class="col-lg-3 col-md-3 col-sm-12 columns name">
+					<div class="col-sm-12 col-md-3 col-lg-3 columns name">
 						<h1 class="text-center"> Matthew Holland </h1>
 					</div>
 					
-					<div class="col-lg-4 col-md-4 columns">
+					<div class="col-md-4 col-lg-4 columns">
 						<p> </p>
 					</div>
-					<!-- Got 'a getchya tooo where-a you-a goins -->
-					<nav class="col-lg-3 col-md-5 col-sm-12 columns">
+
+					<!-- Got 'a getchyua tooo where-a you-a goins -->
+					<nav class="col-sm-12 col-md-5 col-lg-3 columns">
 						<ul class="inline-ul no-bullet">
 							<li class="first"> <a href="index.html">About</a> </li>
 							<li> <a href="portfolio.html">Portfolio</a> </li>
@@ -48,8 +49,10 @@
 
 		<!-- Main page content -->
 		<div class="container">
-			<div class="row placeholder">
-				<div class="col-lg-12 col-md-12 columns">
+			<!-- Place permanent space between <header> and main content. -->
+			<!-- Note: margin-sm, margin-md & margin-lg are used for applying equal padding between stacked columns -->
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-12 margin-sm margin-md margin-lg columns">
 					<p> </p>
 				</div>
 			</div>
@@ -58,74 +61,93 @@
 				<div class="col-lg-1 columns">
 					<p> </p>
 				</div>
-				<!-- The big cheese -->
-				<section class="col-lg-6 col-md-12 col-sm-12 columns bg-white">
-						<h1> About Me </h1>
-						<hr/>
+
+				<!-- The big cheese.  Only apply margin to bottom of <section> if <section> & <aside> become stacked -->
+				<section class="col-sm-12 col-md-12 col-lg-6 margin-sm margin-md margin-lg columns bg-white">
+					<h1> About Me </h1>
+					<hr/>
 	
-						<div class="bio-pic">
-							<img src="assets/images/matt_headshot.png" width="200" height="240" alt="Matthew Holland"/>
-						</div>
-						<!-- Interesting like the NY Times -->
-						<article>
-							<p> I just love vegetables.  I like to eat them; I like to cook them; I like to grow them. I like to discuss veggies with other people.  Admiration of veggies of all types is necessary for happy survival.  From veggie tales to veggies bales, veggies are just all around us.  Here are some of the veges that I love:
-							</p>
+					<div class="bio-pic">
+						<img src="assets/images/matt_headshot.png" width="200" height="240" alt="Matthew Holland"/>
+					</div>
+					<!-- Interesting like the NY Times -->
+					<article>
+						<p> I just love vegetables.  I like to eat them; I like to cook them; I like to grow them. I like to discuss veggies with other people.  Admiration of veggies of all types is necessary for happy survival.  From veggie tales to veggies bales, veggies are just all around us.  Here are some of the veges that I love:
+						</p>
 
-							<br/>
+						<br/>
 
-							<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jicama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea. Grape silver beet watercress potato tigernut corn 	groundnut. Chickweed okra. bitterleaf wattle seed collard greens nori. Grape wattle seed beetroot.
-							</p>
+						<p>Pea horseradish azuki bean lettuce avocado asparagus okra. Kohlrabi radish okra azuki bean corn fava bean mustard tigernut jicama green bean celtuce collard greens avocado quandong fennel gumbo black-eyed pea. Grape silver beet watercress potato tigernut corn 	groundnut. Chickweed okra. bitterleaf wattle seed collard greens nori. Grape wattle seed beetroot.
+						</p>
 
-							<br/>
+						<br/>
 
-							<p> Komatsuna black-eyed pea green bean zucchini gourd winter purslane silver beet rock melon radish asparagus spinach. Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer purslane. Water spinach arugula pea tatsoi.
-							</p>
+						<p> Komatsuna black-eyed pea green bean zucchini gourd winter purslane silver beet rock melon radish asparagus spinach. Beetroot water spinach okra water chestnut ricebean pea catsear courgette summer purslane. Water spinach arugula pea tatsoi.
+						</p>
 
-							<p> Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli. </p>
-						</article>
+						<p> Sea lettuce gumbo grape kale kombu cauliflower salsify kohlrabi okra sea lettuce broccoli. </p>
+					</article>
 				</section>
 
 				<div class="col-lg-1 columns">
 					<p> </p>
 				</div>
+
 				<!-- The less-big cheese, but still important -->
-				<aside class="col-lg-3 col-md-12 col-sm-12 columns bg-white">
+				<aside class="col-sm-12 col-md-12 col-lg-3 margin-sm margin-md columns bg-white">
 					<h3 class="text-center"> Connect With Me </h3>
 					<hr/>
 	
 					<ul class="inline-ul no-bullet text-center">
-						<li> <a href="#"><img src="assets/images/github-icon.png"   height="66" width="66" alt="Github"/>         </a></li>
-						<li> <a href="#"><img src="assets/images/linkedin-icon.png" height="66" width="66" alt="LinkedIn"/>       </a></li>
-						<li> <a href="#"><img src="assets/images/stackoverflow.png" height="66" width="66" alt="Stack Overflow"/> </a></li>
+						<li> 
+							<a href="#"><img src="assets/images/github-icon.png"   height="66" width="66" alt="Github"/></a>
+						</li>
+
+						<li> 
+							<a href="#"><img src="assets/images/linkedin-icon.png" height="66" width="66" alt="LinkedIn"/></a>
+						</li>
+
+						<li> 
+							<a href="#"><img src="assets/images/stackoverflow.png" height="66" width="66" alt="Stack Overflow"/></a>
+						</li>
 					</ul>
 				</aside>
-	
 
 				<div class="col-lg-1 columns">
 					<p> </p>
 				</div>
+
+				<!-- Place permanent space between main content and <footer> -->
+				<!--
+				<div class="row placeholder">
+					<div class="col-sm-12 col-md-12 col-lg-12 columns">
+						<p> &nbsp; </p>
+					</div>
+				</div>-->
 			</div> <!-- .row -->
 		</div> <!-- .container -->
 
-		<!-- The footer stretches 100% -->
+		<!-- The footer stretches 100%, with no padding on left or right -->
 		<footer>
 			<!-- Contain content in the footer to adhere to the grid system -->
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-4 col-md-4 col-sm-4 columns">
+					<div class="col-sm-2 col-md-4 col-lg-4 columns">
 						<p> </p>
 					</div>
-	
-					<div class="col-lg-4 col-md-4 col-sm-4 columns">	
+
+					<!-- Allow more space for <h5> on small device so that text does not wrap -->
+					<div class="col-sm-8 col-md-4 col-lg-4 columns">	
 						<h5 class="text-center"> &copy; 2016 Matthew Holland </h5>
 					</div>
 	
-					<div class="col-lg-4 col-md-4 col-sm-4 columns">
+					<div class="col-sm-2 col-md-4 col-lg-4 columns">
 						<p> </p>
 					</div>
 				</div>
 			</div> <!-- .container -->
 		</footer>
-		
+	<!-- WORD!! -->
 	</body>
+<!-- peace out -->
 </html>
