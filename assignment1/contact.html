@@ -1,7 +1,10 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<title> Portfolio - Matthew Holland </title>
+		<title> Contact - Matthew Holland </title>
+
+		<!-- Include meta viewport tag to give the browser instructions on how to control page dimensions/scaling -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<!-- Apply CSS reset file to maintain cross-browser compatibility -->
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
@@ -15,10 +18,11 @@
 		
 		<!-- The header stretches 100%, with no padding on left or right -->
 		<header class="bg-white">
-			<!-- Contain content in the header to adhere to the grid system -->
+			<!-- Place <header> content in .container to adhere to the grid system -->
 			<div class="container">
 				<div class="row">
 					<!-- Take this out and apply the 'offset-1' class to <header> if you want the background to go left of the name -->
+					<!-- On large screens, provide a column of space between edge of screen and <h1> -->
 					<div class="col-lg-1 columns">
 						<p> </p>
 					</div>
@@ -39,7 +43,7 @@
 							<li> <a href="contact.html">Contact</a> </li>
 						</ul>
 					</nav>
-		
+					<!-- On large screens, provide a column of space between <nav> and edge of screen -->
 					<div class="col-lg-1 columns">
 						<p> </p>
 					</div>
@@ -56,7 +60,7 @@
 					<p> </p>
 				</div>
 			</div>
-
+			<!-- On large screens, provide a column of space between edge of screen and <section> -->
 			<div class="row">
 				<div class="col-lg-1 columns">
 					<p> </p>
@@ -66,30 +70,29 @@
 				<section class="col-sm-12 col-md-12 col-lg-6 margin-sm margin-md margin-lg columns bg-white">
 					<h1> Contact </h1>
 					<hr/>
-
 					<!-- Interesting like the NY Times -->
 					<article>
-							<form>
-								<div class="form-group">
-									<label for="name" name="name" placeholder="John Smith"> Name </label>
-									<input class="form-control" type="text" name="name" />
-								</div>
+						<form>
+							<div class="form-group">
+								<label for="name" name="name" placeholder="John Smith"> Name </label>
+								<input class="form-control" type="text" name="name" />
+							</div>
 
-								<div class="form-group">
-									<label for="email" name="email" placeholder="example@gmail.com"> Email </label>
-									<input class="form-control" type="text" name="email" />
-								</div>
+							<div class="form-group">
+								<label for="email" name="email" placeholder="example@gmail.com"> Email </label>
+								<input class="form-control" type="text" name="email" />
+							</div>
 
-								<div class="form-group">
-									<label for="message"> Message </label>
-									<textarea class="form-control text-area" name="message"> </textarea>
-								</div>
+							<div class="form-group">
+								<label for="message"> Message </label>
+								<textarea class="form-control text-area" name="message"> </textarea>
+							</div>
 
-								<input type="submit" name="submit"/>
-							</form>
-						</article>
+							<input type="submit" name="submit"/>
+						</form>
+					</article>
 				</section>
-
+				<!-- On large screens, provide a column of space between <section> and <aside> -->
 				<div class="col-lg-1 columns">
 					<p> </p>
 				</div>
@@ -100,15 +103,15 @@
 					<hr/>
 	
 					<ul class="inline-ul no-bullet text-center">
-						<li> 
+						<li>
 							<a href="#"><img src="assets/images/github-icon.png"   height="66" width="66" alt="Github"/></a>
 						</li>
 
-						<li> 
+						<li>
 							<a href="#"><img src="assets/images/linkedin-icon.png" height="66" width="66" alt="LinkedIn"/></a>
 						</li>
 
-						<li> 
+						<li>
 							<a href="#"><img src="assets/images/stackoverflow.png" height="66" width="66" alt="Stack Overflow"/></a>
 						</li>
 					</ul>
@@ -117,14 +120,6 @@
 				<div class="col-lg-1 columns">
 					<p> </p>
 				</div>
-
-				<!-- Place permanent space between main content and <footer> -->
-				<!--
-				<div class="row placeholder">
-					<div class="col-sm-12 col-md-12 col-lg-12 columns">
-						<p> &nbsp; </p>
-					</div>
-				</div>-->
 			</div> <!-- .row -->
 		</div> <!-- .container -->
 
@@ -133,19 +128,19 @@
 			<!-- Contain content in the footer to adhere to the grid system -->
 			<div class="container">
 				<div class="row">
-					<div class="col-sm-2 col-md-4 col-lg-4 columns">
+					<div class="col-sm-1 col-md-4 col-lg-4 columns">
 						<p> </p>
 					</div>
 
 					<!-- Allow more space for <h5> on small device so that text does not wrap -->
-					<div class="col-sm-8 col-md-4 col-lg-4 columns">	
+					<div class="col-sm-10 col-md-4 col-lg-4 columns">	
 						<h5 class="text-center"> &copy; 2016 Matthew Holland </h5>
 					</div>
 	
-					<div class="col-sm-2 col-md-4 col-lg-4 columns">
+					<div class="col-sm-1 col-md-4 col-lg-4 columns">
 						<p> </p>
 					</div>
-				</div>
+				</div> <!-- .row -->
 			</div> <!-- .container -->
 		</footer>
 	<!-- WORD!! -->
