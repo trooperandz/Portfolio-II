@@ -1,6 +1,6 @@
 # Portfolio - Assignment 1
 
-> This assignment is designed to familiarize students with responsive web design, using a custom layout without Bootstrap's framework.
+> This assignment is designed to familiarize students with responsive web design, using a custom layout without the Bootstrap framework.  Students are to take their portfolio files from the Basic-Portfolio repository, and redesign them with a responsive layout.
 
 # This repository contains the following files:
 
@@ -8,6 +8,7 @@
  * index.php
  * portfolio.html
  * contact.html
+ * reset.css
  * style.css
  * composer.json
 
