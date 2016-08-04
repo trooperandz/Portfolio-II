@@ -1,142 +1,195 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html>
 	<head>
 		<title> Portfolio - Matthew Holland </title>
 
+		<!-- Include meta viewport tag to give the browser instructions on how to control page dimensions/scaling -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 		<!-- Apply CSS reset file to maintain cross-browser compatibility -->
 		<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
 
-		<!-- This is the fluid grid layout with full-width header and footer. Navigate to index_fixed_container.html to see fixed container layout-->
+		<!-- This is the fluid grid layout with full-width header and footer -->
 		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
-
 	</head>
+
 	<body>
-		<!-- Note: these 'bootstrap look-alike' classes are custom; I've wanted to try and replicate it to understand it better... -->
-		<div class="container">
-			<header class="bg-white">
+		<!-- Note: these 'bootstrap look-alike' classes are custom. No Bootstrap files welcome in this house! -->
+		
+		<!-- The header stretches 100%, with no padding on left or right -->
+		<header class="bg-white">
+			<!-- Place <header> content in .container to adhere to the grid system -->
+			<div class="container">
 				<div class="row">
 					<!-- Take this out and apply the 'offset-1' class to <header> if you want the background to go left of the name -->
-					<div class="col-1 columns">
+					<!-- On large screens, provide a column of space between edge of screen and <h1> -->
+					<div class="col-lg-1 columns">
 						<p> </p>
 					</div>
 					
-					<div class="col-3 columns name">
+					<div class="col-sm-12 col-md-5 col-lg-3 columns name">
 						<h1 class="text-center"> Matthew Holland </h1>
 					</div>
 					
-					<div class="col-4 columns">
+					<div class="col-md-2 col-lg-4 columns">
 						<p> </p>
 					</div>
-	
-					<nav class="col-3 columns">
+
+					<!-- Got 'a getchyua tooo where-a you-a goins' -->
+					<nav class="col-sm-12 col-md-4 col-lg-3 columns">
 						<ul class="inline-ul no-bullet">
 							<li class="first"> <a href="index.html">About</a> </li>
 							<li> <a href="portfolio.html">Portfolio</a> </li>
 							<li> <a href="contact.html">Contact</a> </li>
 						</ul>
 					</nav>
-	
-					<div class="col-1 columns">
+					<!-- On large screens, provide a column of space between <nav> and edge of screen -->
+					<div class="col-lg-1 columns">
 						<p> </p>
 					</div>
 				</div> <!-- .row -->
-			</header>
+			</div> <!-- .container -->
+		</header>
 
-			<div class="row placeholder">
-				<div class="col-12 columns">
+		<!-- Main page content -->
+		<div class="container">
+			<!-- Place permanent space between <header> and main content. -->
+			<!-- Note: margin-sm, margin-md & margin-lg are used for applying equal padding between stacked columns -->
+			<div class="row">
+				<div class="col-sm-12 col-md-12 col-lg-12 margin-sm margin-md margin-lg columns">
 					<p> </p>
 				</div>
 			</div>
-
+			<!-- On large screens, provide a column of space between edge of screen and <section> -->
 			<div class="row">
-				<div class="col-1 columns">
+				<div class="col-lg-1 columns">
 					<p> </p>
 				</div>
-				<section class="col-6 columns bg-white">
-						<h1> About Me </h1>
-						<hr/>
-	
-						<article>
-							<div class="row">
-								<div class="port-img-wrapper first">
-									<div class="col-6 columns">
-										<img src="assets/images/iphone_tablet.jpg" width="267" height="213" alt="Matthew Holland"/>
-										<h4> Appelicious </h4>
-									</div>
-									<div class="col-6 columns">
-										<img src="assets/images/headphones.jpg" width="267" height="213" alt="Matthew Holland"/>
-										<h4> Interactivity </h4>
-									</div>
-								</div>
+
+				<!-- The big cheese.  Only apply margin to bottom of <section> if <section> & <aside> become stacked -->
+				<section class="col-sm-12 col-md-12 col-lg-6 margin-sm margin-md margin-lg columns bg-white">
+					<h1> Portfolio </h1>
+					<hr/>
+					<!-- Interesting like the NY Times. img-wrapper position is relative & <h4> is absolute -->
+					<!-- original 
+					<article>
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper">
+								<img src="assets/images/iphone_tablet.jpg" alt="Appelicious">
+								<h4> Appelicious </h4>
 							</div>
 
-							<div class="row">
-								<div class="port-img-wrapper">
-									<div class="col-6 columns">
-										<img src="assets/images/copper_wires.jpg" width="267" height="213" alt="Matthew Holland"/>
-										<div class="port-hdr">
-										<h4> Technicality </h4>
-										</div>
-									</div>
-									<div class="col-6 columns">
-										<img src="assets/images/abstract_art.jpg" width="267" height="213" alt="Matthew Holland"/>
-										<h4> Futuracticious </h4>
-									</div>
-								</div>
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper">
+								<img src="assets/images/headphones.jpg" alt="Interactivity">
+								<h4> Interactivity </h4>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper">
+								<img src="assets/images/copper_wires.jpg" alt="Technicality">
+								<h4> Technicality </h4>
 							</div>
 
-							<div class="row">
-								<div class="port-img-wrapper">
-									<div class="col-6 columns">
-										<img src="assets/images/future_work.jpg" width="267" height="213" alt="Matthew Holland"/>
-										<h4> Whimsiscale </h4>
-									</div>
-									<!--
-									<div class="col-6 columns">
-										<img src="assets/images/matt_headshot.png" width="267" height="213" alt="Matthew Holland"/>
-										<h4> Things </h4>
-									</div>
-									-->
-								</div>
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper">
+								<img src="assets/images/abstract_art.jpg" alt="Futuracticious">
+								<h4> Futuracticious </h4>
 							</div>
-						</article>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper">
+								<img src="assets/images/future_work.jpg" alt="Whimsiscale">
+								<h4> Whimsiscale </h4>
+							</div>
+						</div>
+					</article> -->
+					<!-- new -->
+					<article>
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper first">
+								<img src="assets/images/iphone_tablet.jpg" alt="Appelicious">
+								<h4> Appelicious </h4>
+							</div>
+
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper second">
+								<img src="assets/images/headphones.jpg" alt="Interactivity">
+								<h4> Interactivity </h4>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper first">
+								<img src="assets/images/copper_wires.jpg" alt="Technicality">
+								<h4> Technicality </h4>
+							</div>
+
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper second">
+								<img src="assets/images/abstract_art.jpg" alt="Futuracticious">
+								<h4> Futuracticious </h4>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col-sm-12 col-md-6 col-lg-6 columns img-wrapper first">
+								<img src="assets/images/future_work.jpg" alt="Whimsiscale">
+								<h4> Whimsiscale </h4>
+							</div>
+						</div>
+					</article>
 				</section>
-
-				<div class="col-1 columns">
+				<!-- On large screens, provide a column of space between <section> and <aside> -->
+				<div class="col-lg-1 columns">
 					<p> </p>
 				</div>
-	
-				<aside class="col-3 columns bg-white">
+
+				<!-- The less-big cheese, but still important -->
+				<aside class="col-sm-12 col-md-12 col-lg-3 margin-sm margin-md columns bg-white">
 					<h3 class="text-center"> Connect With Me </h3>
 					<hr/>
 	
 					<ul class="inline-ul no-bullet text-center">
-						<li> <a href="#"><img src="assets/images/github-icon.png"   height="66" width="66" alt="Github"/>         </a></li>
-						<li> <a href="#"><img src="assets/images/linkedin-icon.png" height="66" width="66" alt="LinkedIn"/>       </a></li>
-						<li> <a href="#"><img src="assets/images/stackoverflow.png" height="66" width="66" alt="Stack Overflow"/> </a></li>
+						<li>
+							<a href="#"><img src="assets/images/github-icon.png"   height="66" width="66" alt="Github"/></a>
+						</li>
+
+						<li>
+							<a href="#"><img src="assets/images/linkedin-icon.png" height="66" width="66" alt="LinkedIn"/></a>
+						</li>
+
+						<li>
+							<a href="#"><img src="assets/images/stackoverflow.png" height="66" width="66" alt="Stack Overflow"/></a>
+						</li>
 					</ul>
 				</aside>
-	
 
-				<div class="col-1 columns">
+				<div class="col-lg-1 columns">
 					<p> </p>
 				</div>
 			</div> <!-- .row -->
-			<footer>
+		</div> <!-- .container -->
+
+		<!-- The footer stretches 100%, with no padding on left or right -->
+		<footer>
+			<!-- Contain content in the footer to adhere to the grid system -->
+			<div class="container">
 				<div class="row">
-					<div class="col-4 columns">
+					<div class="col-sm-1 col-md-4 col-lg-4 columns">
 						<p> </p>
 					</div>
 
-					<div class="col-4 columns">	
+					<!-- Allow more space for <h5> on small device so that text does not wrap -->
+					<div class="col-sm-10 col-md-4 col-lg-4 columns">	
 						<h5 class="text-center"> &copy; 2016 Matthew Holland </h5>
 					</div>
-
-					<div class="col-4 columns">
+	
+					<div class="col-sm-1 col-md-4 col-lg-4 columns">
 						<p> </p>
 					</div>
-				</div>
-			</footer>
-		</div> <!-- .container -->
+				</div> <!-- .row -->
+			</div> <!-- .container -->
+		</footer>
+	<!-- WORD!! -->
 	</body>
+<!-- peace out -->
 </html>

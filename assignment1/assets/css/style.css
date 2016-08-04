@@ -36,13 +36,15 @@ nav {
 
 /* Move the nav ul down, inline with the <h1> name */
 nav ul {
-	padding: 37px 0px;
+	padding: 36.7px 0px;
 }
 
 nav ul li {
 	display: inline;
 	padding: 0px 17px;
-	border-left: .5px solid #777;
+	/* Make the border a bit lighter than the text, with rgba.  Use rgb as a browser-incompatibility fallback */
+	border-left: 1px solid rgb(119,119,119);
+	border-left: 1px solid rgba(119,119,119,0.4);
 	color: #777;
 }
 
@@ -60,14 +62,24 @@ img {
     -ms-transition: all .5s ease;
     transition: all .5s ease;
 }
-
-/* Make the image rotate on hover event */	
+	
 img:hover {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     transform: rotate(360deg);
+}
+
+article img {
+	width: 100%;
+	height: auto;
+	padding: 12px;
+}
+
+aside img {
+	width: 66;
+	height: 66;
 }
 
 /* Heading section line dividers */
@@ -113,7 +125,7 @@ h1, h2, h3, h4, h5 {
 }
 
 h1 {
-	font-size: 1.7em;
+	font-size: 1.6em;
 	font-weight: bold;
 	padding-bottom: 10px;
 }
@@ -140,13 +152,21 @@ h4 {
 }
 
 article h4 {
-	padding: 20px;
+	/* Note: width and top styling are inside of media queries */
+	position: absolute;
 	background-color: #4aaaa5;
 	color: #fff;
-	width: 267px; /* Match the picture width */
-	margin-left: 32.4px; /* Scoot it over a bit to get it inline with the picture */
-	position: absolute;  
-	top: 140px; /* Move it down until is it inside of the picture correctly */
+	padding: 20px 5px;
+	/* Scoot it over just a little bit, to get it even with the left border of the image */
+	margin-left: .53em;
+	transition: .8s;
+}
+
+article h4:hover {
+	background-color: #008cba;
+	opacity: .8;
+	color: #ffa500;
+	cursor: pointer;
 }
 
 h5 {
@@ -166,7 +186,7 @@ aside ul {
 
 aside ul li {
 	display: inline;
-	padding: 9px;
+	padding: 2%;
 }
 
 p {
@@ -231,6 +251,71 @@ input[type="submit"]:hover {
 	float: left;
 }
 
+/* You can use this if you want the background to flow to the left of your name instead of being white. Add to <header> tag */
+.offset-1 {
+	margin-left: 8.33%;
+}
+
+/* Holds all main page content */
+.container {
+	/* Give the content containers some space from the edge of the screen */
+	padding-left: 15px;
+	padding-right: 15px;
+	margin-left: auto;
+	margin-right: auto;
+}
+/* Clear the flow of the page after .row, so content does not float up into the row */
+.row::after {
+	content: "";
+	clear: both;
+	display: block;
+}
+/* Try to make the space between the top and bottom of the <section>, <header> and <footer>s equivalent */
+.placeholder {
+	height: 40px; 
+}
+
+.bg-white {
+	background: #fff;
+}
+/* Make the text flow up to the right of the bio pic */
+.bio-pic {
+	float: left;
+	margin-right: 25px;
+}
+/* Make sure that the first <li> element has no left border */
+.first {
+	border: none;
+	/*padding: 0;*/
+}
+/* Center all main headings */
+.text-center {
+	text-align: center;
+}
+/* Give the navigation <li> elements separators */
+.li-border-lft {
+	border-left: 1px solid #fff;
+}
+
+.img-wrapper {
+	position: relative;
+	text-align: center;
+}
+
+.img-wrapper.first {
+	margin-top: 0;
+}
+
+.port-img-wrapper {
+	text-align: center;
+	margin-top: 30px;
+	position: relative; /* Have to have this so that the picture will float up in it */
+}
+
+.port-img-wrapper.first {
+	margin-top: 0;
+}
+
 /* Apply large-columns grid styles if screen is at least 980px wide */
 @media (min-width: 980px) {
 	.col-lg-1 {
@@ -284,9 +369,38 @@ input[type="submit"]:hover {
 	.margin-lg {
 		margin-bottom: 40px;
 	}
+
+	.img-wrapper {
+		margin-bottom: 24px;
+	}
+
+	.img-wrapper.first {
+		padding-right: 12px;
+	}
+
+	.img-wrapper.second {
+		padding-left: 12px;
+	}
+
+	article img {
+		width: 100%;
+		padding: 0;
+	}
+
+	/* Special instructions for label distance from top of screen, and label width, due to discrepancies */
+	article h4 {
+		top: 68%;
+		width: 96.2%;
+		margin: 0;
+	}
+
+	.bio-pic img {
+		width: 200px;
+		height: 240px;
+	}
 }
 
-@media (min-width: 768px) and (max-width: 980px) {
+@media (min-width: 767px) and (max-width: 980px) {
 	/* Apply medium-columns grid styles if screen is at least 768px wide, and less than 980px wide */
 	.col-md-1 {
 		width: 8.33%;
@@ -339,6 +453,35 @@ input[type="submit"]:hover {
 	/* Apply margin to main section */
 	.margin-md {
 		margin-bottom: 40px;
+	}
+
+	.img-wrapper {
+		margin-bottom: 24px;
+	}
+
+	.img-wrapper.first {
+		padding-right: 12px;
+	}
+
+	.img-wrapper.second {
+		padding-left: 12px;
+	}
+
+	article img {
+		width: 100%;
+		padding: 0;
+	}
+
+	/* Special instructions for label distance from top of screen, and label width, due to discrepancies */
+	article h4 {
+		top: 70%;
+		width: 97%;
+		margin: 0;
+	}
+
+	.bio-pic img {
+		width: 200px;
+		height: 240px;
 	}
 }
 
@@ -396,64 +539,46 @@ input[type="submit"]:hover {
 		margin-bottom: 40px;
 	}
 
-	/* Override container left and right padding for main name <h1> */
+	header {
+		position: static;
+	}
+
+	/* Override container left and right padding for main name <h1> when on small screen */
 	header h1 {
 		margin: 0px -15px;
 	}
-}
 
-/* You can use this if you want the background to flow to the left of your name instead of being white. Add to <header> tag */
-.offset-1 {
-	margin-left: 8.33%;
-}
+	/* Space navigation <li>'s out to almost 100% of section on small devices */
+	nav ul li {
+    	padding: 0px 8%;
+    }
 
-/* Holds all main page content */
-.container {
-	/* Give the content containers some space from the edge of the screen */
-	padding-left: 15px;
-	padding-right: 15px;
-	margin-left: auto;
-	margin-right: auto;
-}
-/* Clear the flow of the page after .row, so content does not float up into the row */
-.row::after {
-	content: "";
-	clear: both;
-	display: block;
-}
-/* Try to make the space between the top and bottom of the <section>, <header> and <footer>s equivalent */
-.placeholder {
-	height: 40px; 
-}
+    .img-wrapper {
+    	margin-bottom: 30px;
+    }
 
-.bg-white {
-	background: #fff;
-}
-/* Make the text flow up to the right of the bio pic */
-.bio-pic {
-	float: left;
-	margin-right: 25px;
-}
-/* Make sure that the first <li> element has no left border */
-.first {
-	border: none;
-	/*padding: 0;*/
-}
-/* Center all main headings */
-.text-center {
-	text-align: center;
-}
-/* Give the navigation <li> elements separators */
-.li-border-lft {
-	border-left: 1px solid #fff;
-}
+    /* Stretch the image the full container width to put it inline with the <hr>, and put extra space between images */
+    article img {
+    	width: 100%;
+    	padding: 0;
+    }
 
-.port-img-wrapper {
-	text-align: center;
-	margin-top: 30px;
-	position: relative; /* Have to have this so that the picture will float up in it */
-}
+	/* Special instructions for image label distance from top of screen, and label width, due to discrepancies */
+	article h4 {
+		top: 67%;
+		width: 100%;
+		margin: 0;
+	}
 
-.port-img-wrapper.first {
-	margin-top: 0;
+	/* Take the margin off of the div so that the picture is centered. Add spacing between bottom and main text */
+	.bio-pic {
+		margin: 0;
+		margin-bottom: 20px;
+	}
+
+	/* Make sure the image scales while on small devices */
+	.bio-pic img {
+		width: 100%;
+		height: auto;
+	}
 }
